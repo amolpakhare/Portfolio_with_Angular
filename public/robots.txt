@@ -1,0 +1,17 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://rathodnaynesh.web.app/sitemap.xml
+
+# Disallow certain files
+Disallow: /ngsw-worker.js
+Disallow: /ngsw.json
+Disallow: /safety-worker.js
+Disallow: /worker-basic.min.js
+
+# Allow important resources
+Allow: /manifest.webmanifest
+Allow: /browserconfig.xml
+Allow: /icons/
+Allow: /assets/

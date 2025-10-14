@@ -1,0 +1,273 @@
+/* About Component Styles */
+
+/* Hero Section */
+.about-hero {
+  min-height: 60vh;
+  position: relative;
+}
+
+.profile-section {
+  animation: fadeInUp 1s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Profile Image Animation */
+.profile-section .group:hover::before {
+  animation-play-state: paused;
+}
+
+/* Contact Info Cards */
+.contact-item {
+  transform: translateY(0);
+  transition: all 0.3s ease;
+}
+
+.contact-item:hover {
+  transform: translateY(-0.25rem);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+/* Education Items */
+.education-item {
+  transform: translateY(0);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.education-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.1), transparent);
+  transition: left 0.5s;
+}
+
+.education-item:hover::before {
+  left: 100%;
+}
+
+.education-item:hover {
+  transform: translateY(-0.25rem);
+}
+
+/* Certification Cards */
+.cert-card {
+  transform: translateY(0);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.cert-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(139, 92, 246, 0.1), transparent);
+  transition: left 0.5s;
+}
+
+.cert-card:hover::before {
+  left: 100%;
+}
+
+.cert-card:hover {
+  transform: translateY(-0.5rem);
+}
+
+.cert-card .line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Interest Cards */
+.interest-card {
+  transform: translateY(0);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.interest-card:hover {
+  transform: translateY(-0.5rem) scale(1.02);
+}
+
+.interest-card .w-16 {
+  transition: all 0.3s ease;
+}
+
+.interest-card:hover .w-16 {
+  transform: scale(1.1) rotate(5deg);
+}
+
+/* Custom Animations */
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 8s linear infinite;
+}
+
+/* Gradient Text Animation */
+@keyframes gradient-x {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.bg-gradient-to-r {
+  background-size: 200% 200%;
+  animation: gradient-x 3s ease infinite;
+}
+
+/* Section Transitions */
+section {
+  position: relative;
+  overflow: hidden;
+}
+
+section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #3b82f6, transparent);
+  animation: section-line 3s infinite;
+}
+
+@keyframes section-line {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.5rem;
+    line-height: 1.1;
+  }
+  
+  .contact-info {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .contact-item {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .contact-item svg {
+    margin-bottom: 0.5rem;
+  }
+  
+  .education-item,
+  .cert-card,
+  .interest-card {
+    margin-bottom: 1.5rem;
+  }
+  
+  .profile-section .relative {
+    width: 8rem;
+    height: 8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+  
+  .contact-item span {
+    font-size: 0.875rem;
+  }
+  
+  .cert-card h3 {
+    font-size: 1rem;
+  }
+  
+  .interest-card h3 {
+    font-size: 1rem;
+  }
+}
+
+/* Dark mode specific styles */
+@media (prefers-color-scheme: dark) {
+  .about-hero {
+    background: linear-gradient(135deg, #1e293b, #334155, #1e293b);
+  }
+  
+  .education-item::before {
+    background: linear-gradient(90deg, transparent, rgba(99, 102, 241, 0.1), transparent);
+  }
+  
+  .cert-card::before {
+    background: linear-gradient(90deg, transparent, rgba(167, 139, 250, 0.1), transparent);
+  }
+}
+
+/* Hover effects for buttons */
+.group:hover svg {
+  transform: translateX(0.25rem);
+}
+
+/* Animation delays for staggered effects */
+.contact-item:nth-child(1) { animation-delay: 0.1s; }
+.contact-item:nth-child(2) { animation-delay: 0.2s; }
+.contact-item:nth-child(3) { animation-delay: 0.3s; }
+
+.education-item:nth-child(1) { animation-delay: 0.1s; }
+.education-item:nth-child(2) { animation-delay: 0.2s; }
+.education-item:nth-child(3) { animation-delay: 0.3s; }
+.education-item:nth-child(4) { animation-delay: 0.4s; }
+
+.cert-card:nth-child(1) { animation-delay: 0.1s; }
+.cert-card:nth-child(2) { animation-delay: 0.2s; }
+.cert-card:nth-child(3) { animation-delay: 0.3s; }
+.cert-card:nth-child(4) { animation-delay: 0.4s; }
+.cert-card:nth-child(5) { animation-delay: 0.5s; }
+.cert-card:nth-child(6) { animation-delay: 0.6s; }
+
+.interest-card:nth-child(1) { animation-delay: 0.1s; }
+.interest-card:nth-child(2) { animation-delay: 0.2s; }
+.interest-card:nth-child(3) { animation-delay: 0.3s; }
+.interest-card:nth-child(4) { animation-delay: 0.4s; }
+
+/* Loading state animations */
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.loading {
+  animation: pulse 1.5s ease-in-out infinite;
+}

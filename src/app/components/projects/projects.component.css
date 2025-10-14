@@ -1,0 +1,454 @@
+/* Projects Component Styles */
+
+/* Hero Section */
+.projects-hero {
+  min-height: 60vh;
+  position: relative;
+}
+
+.hero-title {
+  animation: fadeInUp 1s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Filter Buttons */
+.filter-section button {
+  transform: translateY(0);
+  transition: all 0.3s ease;
+}
+
+.filter-section button:hover {
+  transform: translateY(-2px);
+}
+
+.filter-section button.active {
+  transform: translateY(-2px) scale(1.05);
+}
+
+/* Project Cards */
+.project-card {
+  transform: translateY(0);
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.project-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(147, 51, 234, 0.1), transparent);
+  transition: left 0.8s;
+  z-index: 1;
+}
+
+.project-card:hover::before {
+  left: 100%;
+}
+
+.project-card:hover {
+  transform: translateY(-1rem) scale(1.02);
+}
+
+/* Project Image Hover Effects */
+.project-card img {
+  transition: all 0.5s ease;
+}
+
+.project-card:hover img {
+  transform: scale(1.1) rotate(1deg);
+}
+
+/* Project Content Animations */
+.project-card h3 {
+  transition: all 0.3s ease;
+}
+
+.project-card:hover h3 {
+  transform: translateX(5px);
+}
+
+/* Feature List Animations */
+.project-card ul li {
+  opacity: 0;
+  transform: translateX(-20px);
+  animation: slideInLeft 0.6s ease-out forwards;
+}
+
+.project-card ul li:nth-child(1) { animation-delay: 0.1s; }
+.project-card ul li:nth-child(2) { animation-delay: 0.2s; }
+.project-card ul li:nth-child(3) { animation-delay: 0.3s; }
+.project-card ul li:nth-child(4) { animation-delay: 0.4s; }
+.project-card ul li:nth-child(5) { animation-delay: 0.5s; }
+.project-card ul li:nth-child(6) { animation-delay: 0.6s; }
+
+@keyframes slideInLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Technology Tags */
+.project-card .flex-wrap span {
+  opacity: 0;
+  transform: scale(0.8);
+  animation: scaleIn 0.4s ease-out forwards;
+  transition: all 0.2s ease;
+}
+
+.project-card .flex-wrap span:hover {
+  transform: scale(1.1);
+  box-shadow: 0 2px 8px rgba(147, 51, 234, 0.3);
+}
+
+.project-card .flex-wrap span:nth-child(1) { animation-delay: 0.1s; }
+.project-card .flex-wrap span:nth-child(2) { animation-delay: 0.15s; }
+.project-card .flex-wrap span:nth-child(3) { animation-delay: 0.2s; }
+.project-card .flex-wrap span:nth-child(4) { animation-delay: 0.25s; }
+.project-card .flex-wrap span:nth-child(5) { animation-delay: 0.3s; }
+.project-card .flex-wrap span:nth-child(6) { animation-delay: 0.35s; }
+.project-card .flex-wrap span:nth-child(7) { animation-delay: 0.4s; }
+.project-card .flex-wrap span:nth-child(8) { animation-delay: 0.45s; }
+
+@keyframes scaleIn {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Project Stats Animation */
+.project-card .grid .text-center {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slideUp 0.6s ease-out forwards;
+}
+
+.project-card .grid .text-center:nth-child(1) { animation-delay: 0.1s; }
+.project-card .grid .text-center:nth-child(2) { animation-delay: 0.2s; }
+.project-card .grid .text-center:nth-child(3) { animation-delay: 0.3s; }
+.project-card .grid .text-center:nth-child(4) { animation-delay: 0.4s; }
+
+@keyframes slideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Button Hover Effects */
+.project-card a {
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.project-card a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.project-card a:hover::before {
+  left: 100%;
+}
+
+.project-card a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Status Badges */
+.project-card .absolute span {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+/* Floating Animation */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.project-card:nth-child(odd) {
+  animation: float 8s ease-in-out infinite;
+}
+
+.project-card:nth-child(even) {
+  animation: float 8s ease-in-out infinite reverse;
+}
+
+/* Gradient Animations */
+@keyframes gradient-x {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.bg-gradient-to-r {
+  background-size: 200% 200%;
+  animation: gradient-x 4s ease infinite;
+}
+
+/* Section Transitions */
+section {
+  position: relative;
+  overflow: hidden;
+}
+
+section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #8b5cf6, transparent);
+  animation: section-line 5s infinite;
+}
+
+@keyframes section-line {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+
+/* Staggered Animation Delays */
+.project-card:nth-child(1) { animation-delay: 0.2s; }
+.project-card:nth-child(2) { animation-delay: 0.4s; }
+.project-card:nth-child(3) { animation-delay: 0.6s; }
+.project-card:nth-child(4) { animation-delay: 0.8s; }
+.project-card:nth-child(5) { animation-delay: 1.0s; }
+.project-card:nth-child(6) { animation-delay: 1.2s; }
+
+/* Icon Animations */
+.project-card svg {
+  transition: all 0.3s ease;
+}
+
+.project-card:hover svg {
+  transform: scale(1.1) rotate(5deg);
+}
+
+/* Project Type Badge Animation */
+.project-card .absolute:first-child span {
+  animation: slideInDown 0.6s ease-out;
+}
+
+@keyframes slideInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Status Badge Animation */
+.project-card .absolute:last-child span {
+  animation: slideInDown 0.6s ease-out 0.2s both;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .projects-grid-section .grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 3rem;
+    line-height: 1.1;
+  }
+  
+  .project-card {
+    margin-bottom: 2rem;
+  }
+  
+  .project-card .p-8 {
+    padding: 1.5rem;
+  }
+  
+  .filter-section .flex {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .filter-section button {
+    width: 100%;
+    max-width: 200px;
+    margin-bottom: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .project-card h3 {
+    font-size: 1.25rem;
+  }
+  
+  .project-card .flex-wrap {
+    gap: 0.25rem;
+  }
+  
+  .project-card .flex-wrap span {
+    font-size: 0.625rem;
+    padding: 0.25rem 0.5rem;
+  }
+  
+  .project-card .grid.grid-cols-2 {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+/* Dark mode specific styles */
+@media (prefers-color-scheme: dark) {
+  .projects-hero {
+    background: linear-gradient(135deg, #1e293b, #334155, #1e293b);
+  }
+  
+  .project-card::before {
+    background: linear-gradient(90deg, transparent, rgba(168, 85, 247, 0.1), transparent);
+  }
+}
+
+/* Loading Skeleton */
+.project-skeleton {
+  animation: skeleton-loading 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-color: #f3f4f6;
+  }
+  100% {
+    background-color: #e5e7eb;
+  }
+}
+
+/* Filter Transition */
+.filter-transition {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: all 0.3s ease;
+}
+
+.filter-transition.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Hover effects for buttons */
+.group:hover svg {
+  transform: translateX(0.25rem);
+}
+
+/* 3D Transform Effects */
+.project-card:hover {
+  transform: translateY(-1rem) rotateX(2deg) rotateY(2deg);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Glassmorphism Effect */
+.project-card,
+.filter-section button {
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Progress Animation */
+@keyframes progress {
+  0% { width: 0%; }
+  100% { width: 100%; }
+}
+
+.progress-bar {
+  animation: progress 2s ease-in-out;
+}
+
+/* Checkmark Animation */
+.project-card ul li svg {
+  animation: checkmark 0.6s ease-out;
+}
+
+@keyframes checkmark {
+  0% {
+    transform: scale(0) rotate(45deg);
+  }
+  50% {
+    transform: scale(1.2) rotate(45deg);
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+/* Image Overlay Animation */
+.project-card .relative::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(45deg, rgba(147, 51, 234, 0.1), rgba(79, 70, 229, 0.1));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.project-card:hover .relative::after {
+  opacity: 1;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, #8b5cf6, #6366f1);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(45deg, #7c3aed, #4f46e5);
+}

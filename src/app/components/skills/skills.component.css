@@ -1,0 +1,412 @@
+/* Skills Component Styles */
+
+/* Hero Section */
+.skills-hero {
+  min-height: 60vh;
+  position: relative;
+}
+
+.hero-title {
+  animation: fadeInUp 1s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Skill Cards */
+.skill-card {
+  transform: translateY(0);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.skill-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.skill-card:hover::before {
+  left: 100%;
+}
+
+.skill-card:hover {
+  transform: translateY(-0.5rem) scale(1.02);
+}
+
+.skill-card .w-20 {
+  transition: all 0.3s ease;
+}
+
+.skill-card:hover .w-20 {
+  transform: scale(1.1) rotate(5deg);
+}
+
+/* Tech Cards */
+.tech-card {
+  transform: translateY(0);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.tech-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.1), transparent);
+  transition: left 0.6s;
+}
+
+.tech-card:hover::before {
+  left: 100%;
+}
+
+.tech-card:hover {
+  transform: translateY(-0.5rem);
+}
+
+.tech-card .w-16 {
+  transition: all 0.3s ease;
+}
+
+.tech-card:hover .w-16 {
+  transform: scale(1.15) rotate(-5deg);
+}
+
+/* Backend Cards */
+.backend-card {
+  transform: translateY(0);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.backend-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(34, 197, 94, 0.1), transparent);
+  transition: left 0.7s;
+}
+
+.backend-card:hover::before {
+  left: 100%;
+}
+
+.backend-card:hover {
+  transform: translateY(-0.5rem) scale(1.02);
+}
+
+.backend-card .w-16 {
+  transition: all 0.3s ease;
+}
+
+.backend-card:hover .w-16 {
+  transform: scale(1.2) rotate(10deg);
+}
+
+/* Tool Cards */
+.tool-card {
+  transform: translateY(0);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.tool-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(147, 51, 234, 0.1), transparent);
+  transition: left 0.4s;
+}
+
+.tool-card:hover::before {
+  left: 100%;
+}
+
+.tool-card:hover {
+  transform: translateY(-0.5rem) scale(1.05);
+}
+
+.tool-card .w-16 {
+  transition: all 0.3s ease;
+}
+
+.tool-card:hover .w-16 {
+  transform: scale(1.3) rotate(-10deg);
+}
+
+/* Progress Bars Animation */
+.progress-bar {
+  transition: width 2s ease-in-out;
+}
+
+/* Gradient Animations */
+@keyframes gradient-x {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.bg-gradient-to-r {
+  background-size: 200% 200%;
+  animation: gradient-x 3s ease infinite;
+}
+
+/* Section Transitions */
+section {
+  position: relative;
+  overflow: hidden;
+}
+
+section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #8b5cf6, transparent);
+  animation: section-line 4s infinite;
+}
+
+@keyframes section-line {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+
+/* Skill Level Indicators */
+.skill-level {
+  position: relative;
+  overflow: hidden;
+}
+
+.skill-level::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+
+/* Floating Animation */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.skill-card:nth-child(odd) {
+  animation: float 6s ease-in-out infinite;
+}
+
+.skill-card:nth-child(even) {
+  animation: float 6s ease-in-out infinite reverse;
+}
+
+/* Staggered Animation Delays */
+.skill-card:nth-child(1) { animation-delay: 0.1s; }
+.skill-card:nth-child(2) { animation-delay: 0.2s; }
+.skill-card:nth-child(3) { animation-delay: 0.3s; }
+.skill-card:nth-child(4) { animation-delay: 0.4s; }
+
+.tech-card:nth-child(1) { animation-delay: 0.1s; }
+.tech-card:nth-child(2) { animation-delay: 0.2s; }
+.tech-card:nth-child(3) { animation-delay: 0.3s; }
+.tech-card:nth-child(4) { animation-delay: 0.4s; }
+.tech-card:nth-child(5) { animation-delay: 0.5s; }
+.tech-card:nth-child(6) { animation-delay: 0.6s; }
+
+.backend-card:nth-child(1) { animation-delay: 0.1s; }
+.backend-card:nth-child(2) { animation-delay: 0.2s; }
+.backend-card:nth-child(3) { animation-delay: 0.3s; }
+.backend-card:nth-child(4) { animation-delay: 0.4s; }
+.backend-card:nth-child(5) { animation-delay: 0.5s; }
+.backend-card:nth-child(6) { animation-delay: 0.6s; }
+
+.tool-card:nth-child(1) { animation-delay: 0.05s; }
+.tool-card:nth-child(2) { animation-delay: 0.1s; }
+.tool-card:nth-child(3) { animation-delay: 0.15s; }
+.tool-card:nth-child(4) { animation-delay: 0.2s; }
+.tool-card:nth-child(5) { animation-delay: 0.25s; }
+.tool-card:nth-child(6) { animation-delay: 0.3s; }
+.tool-card:nth-child(7) { animation-delay: 0.35s; }
+.tool-card:nth-child(8) { animation-delay: 0.4s; }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 3rem;
+    line-height: 1.1;
+  }
+  
+  .skill-card,
+  .tech-card,
+  .backend-card,
+  .tool-card {
+    margin-bottom: 1.5rem;
+  }
+  
+  .skill-card .w-20 {
+    width: 4rem;
+    height: 4rem;
+  }
+  
+  .tech-card .w-16,
+  .backend-card .w-16,
+  .tool-card .w-16 {
+    width: 3rem;
+    height: 3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .skill-card h3,
+  .tech-card h3,
+  .backend-card h3,
+  .tool-card h3 {
+    font-size: 1.25rem;
+  }
+  
+  .skill-card p,
+  .tech-card p,
+  .backend-card p {
+    font-size: 0.875rem;
+  }
+}
+
+/* Dark mode specific styles */
+@media (prefers-color-scheme: dark) {
+  .skills-hero {
+    background: linear-gradient(135deg, #1e293b, #334155, #1e293b);
+  }
+  
+  .skill-card::before {
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  }
+  
+  .tech-card::before {
+    background: linear-gradient(90deg, transparent, rgba(99, 102, 241, 0.1), transparent);
+  }
+  
+  .backend-card::before {
+    background: linear-gradient(90deg, transparent, rgba(52, 211, 153, 0.1), transparent);
+  }
+  
+  .tool-card::before {
+    background: linear-gradient(90deg, transparent, rgba(168, 85, 247, 0.1), transparent);
+  }
+}
+
+/* Pulse Animation for Progress Bars */
+@keyframes pulse-progress {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+.skill-level div {
+  animation: pulse-progress 2s ease-in-out infinite;
+}
+
+/* Hover effects for buttons */
+.group:hover svg {
+  transform: translateX(0.25rem);
+}
+
+/* Loading state animations */
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.loading {
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+/* Icon rotation on hover */
+.skill-card:hover .text-3xl,
+.tech-card:hover .text-2xl,
+.backend-card:hover .text-2xl {
+  transform: scale(1.2) rotate(360deg);
+  transition: transform 0.6s ease;
+}
+
+/* 3D Transform Effects */
+.skill-card:hover {
+  transform: translateY(-0.5rem) rotateX(5deg) rotateY(5deg);
+}
+
+.tech-card:hover {
+  transform: translateY(-0.5rem) rotateX(-5deg) rotateY(-5deg);
+}
+
+.backend-card:hover {
+  transform: translateY(-0.5rem) scale(1.02) rotateX(3deg);
+}
+
+/* Glassmorphism Effect */
+.skill-card,
+.tech-card,
+.backend-card,
+.tool-card {
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, #8b5cf6, #3b82f6);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(45deg, #7c3aed, #2563eb);
+}

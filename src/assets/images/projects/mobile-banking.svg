@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#f8fafc"/>
+  <rect x="20" y="20" width="360" height="260" rx="12" fill="#06b6d4" opacity="0.1"/>
+  <rect x="170" y="60" width="60" height="100" rx="15" fill="#06b6d4"/>
+  <rect x="175" y="70" width="50" height="30" rx="5" fill="#fff"/>
+  <circle cx="200" cy="145" r="8" fill="#fff"/>
+  <rect x="150" y="170" width="100" height="8" rx="4" fill="#06b6d4"/>
+  <rect x="120" y="190" width="160" height="6" rx="3" fill="#6b7280"/>
+  <rect x="140" y="210" width="120" height="6" rx="3" fill="#6b7280"/>
+  <text x="200" y="250" text-anchor="middle" fill="#1f2937" font-family="Arial, sans-serif" font-size="14" font-weight="bold">Mobile Banking</text>
+  <text x="200" y="270" text-anchor="middle" fill="#6b7280" font-family="Arial, sans-serif" font-size="10">Financial Application</text>
+</svg>
