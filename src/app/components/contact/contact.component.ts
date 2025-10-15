@@ -138,9 +138,10 @@ import { AnimationService } from '../../services/animation.service';
                   formControlName="subject"
                   class="w-full px-4 py-3 rounded-lg border-2 border-gray-200 dark:border-secondary-700 bg-white dark:bg-secondary-800 text-gray-900 dark:text-white focus:border-indigo-500 focus:outline-none transition-colors">
                   <option value="">Select a subject</option>
-                  <option value="web-development">Web Development</option>
-                  <option value="frontend-development">Frontend Development</option>
-                  <option value="fullstack-development">Full Stack Development</option>
+                  <option value="web-development">Python Development</option>
+                  <option value="frontend-development">Data Analyst and Business Analyst</option>
+                  <option value="frontend-development">Data Science</option>
+                  <option value="fullstack-development">Machine Learning</option>
                   <option value="consulting">Technical Consulting</option>
                   <option value="collaboration">Project Collaboration</option>
                   <option value="other">Other</option>
